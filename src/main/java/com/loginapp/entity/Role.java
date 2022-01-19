@@ -20,8 +20,10 @@ public class Role {
 
     @Id
     @Column(name = "role_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(45)")
     private String roleName;
 
 }

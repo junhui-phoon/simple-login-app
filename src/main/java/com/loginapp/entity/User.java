@@ -28,12 +28,19 @@ public class User {
 
     @Id
     @Column(name = "user_id")
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(nullable = false, columnDefinition = "VARCHAR(45)")
     private String userName;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(45)")
     private String name;
+
+    @Column(nullable = false, columnDefinition = "VARCHAR(64)")
     private String password;
+
+    @Column(nullable = false)
     private boolean isEnabled;
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

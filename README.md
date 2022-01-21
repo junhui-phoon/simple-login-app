@@ -53,3 +53,10 @@ INSERT INTO `users_roles` (`user_id`, `role_id`) VALUES(4, 2);
 | bob      | bob456     | USER    |
 | charlie  | charlie135 | MANAGER |
 | david    | david246   | USER    |
+
+* Start Spring Boot Application either through IDE or navigate to project folder and issuing the following command:
+  * `./mvnw spring-boot:run` (MacOS/Linux)
+  * `mvnw spring-boot:run` (Windows)
+
+
+* Access the Login Page through `localhost:8080` using any browser.
